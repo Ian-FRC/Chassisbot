@@ -9,9 +9,8 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class DrivetrainSubsystem extends SubsystemBase {
 
-  CANSparkMax leftFrontMotor = new CANSparkMax();
- CANSparkMax motor2
-
+  CANSparkMax leftFrontMotor = new CANSparkMax(1,CANSparkMaxLowLevel.MotorType.kBrushless); 
+  
   /** Creates a new ExampleSubsystem. */
   public DrivetrainSubsystem() {
 
