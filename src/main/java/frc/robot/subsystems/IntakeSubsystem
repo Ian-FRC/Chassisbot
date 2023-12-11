@@ -1,0 +1,86 @@
+import edu.wpi.first.wpilibj2.command.CommandBase;
+ 
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
+ 
+
+
+public class IntakeSubsystem extends SubsystemBase {
+
+  /** Creates a new ExampleSubsystem. */
+
+  public IntakeSubsystem() {
+    CANSparkMax belt1 = new CANSparkMax(Constants.DriveTrainConstants.belt1CANID,CANSparkMaxLowLevel.MotorType.kBrushless) 
+    CANSparkMax belt2 = new CANSparkMax(Constants.DriveTrainConstants.belt2CANID,CANSparkMaxLowLevel.MotorType.kBrushless)
+    CANSparkMax belt3 = new CANSparkMax(Constants.DriveTrainConstants.belt3CANID,CANSparkMaxLowLevel.MotorType.kBrushless)
+    
+  }
+
+
+
+  /**
+15
+   * Example command factory method.
+16
+   *
+17
+   * @return a command
+18
+   */
+
+  public CommandBase exampleMethodCommand() {
+
+    // Inline construction of command goes here.
+
+    // Subsystem::RunOnce implicitly requires `this` subsystem.
+
+    return runOnce(
+
+        () -> {
+
+          /* one-time action goes here */
+
+        });
+
+  }
+
+
+
+  /**
+29
+   * An example method querying a boolean state of the subsystem (for example, a digital sensor).
+30
+   *
+31
+   * @return value of some boolean subsystem state, such as a digital sensor.
+32
+   */
+
+  public boolean exampleCondition() {
+
+    // Query some boolean state, such as a digital sensor.
+
+    return false;
+
+  }
+
+
+
+  @Override
+
+  public void periodic() {
+
+    // This method will be called once per scheduler run
+
+  }
+
+
+
+  @Override
+
+  public void simulationPeriodic() {
+
+    // This method will be called once per scheduler run during simulation
+
+  }
+
+}
